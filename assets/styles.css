@@ -79,6 +79,12 @@ ul {
 li {
   margin-top: 10px;
 }
+.scroll-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 50;
+}
 
 /*text*/
 .title {
