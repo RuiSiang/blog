@@ -1,2 +1,2 @@
-# ruisiang.github.io
+# ruisiang.xyz
 Personal blog source code
