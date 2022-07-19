@@ -1,0 +1,454 @@
+
+/*********************  Default-CSS  *********************/
+:root {
+    scroll-behavior: unset;
+}
+
+@font-face {
+    font-family: Kanit-Light;
+    src: url(../fonts/Kanit-Light.ttf);
+}
+@font-face {
+    font-family: Kanit-Medium;
+    src: url(../fonts/Kanit-Medium.ttf);
+}
+@font-face {
+    font-family: Kanit-Regular;
+    src: url(../fonts/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: Kanit-SemiBold;
+    src: url(../fonts/Kanit-SemiBold.ttf);
+}
+@font-face {
+    font-family: Kanit-Bold;
+    src: url(../fonts/Kanit-Bold.ttf);
+}
+
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0
+}
+body {
+  	margin: 0;
+  	font-family: Kanit-Light;
+  	overflow-x: hidden;
+  	color: #3A3A3A;
+	background-color: #fff;
+  	font-size: 18px;
+	line-height: 1.4;
+}
+a,
+span,
+a:hover,
+a:active,
+button {
+	text-decoration: none;
+}
+a,
+div a:hover,
+div a:active,
+div a:focus,
+button {
+	text-decoration: none;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+p {
+  	margin: 0;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+	margin: 0;
+}
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+img {
+	max-width: 100%;
+}
+.cm-overflow{
+	overflow: hidden;
+	touch-action: unset;
+}
+.row{
+	margin: 0 -15px;
+}
+.container{
+	padding: 0 15px;
+}
+.col, [class*=col-]{
+	padding: 0 15px;
+}
+/*********************  Default-CSS  End *********************/
+
+/*============== Header Css Start ===============*/
+.header_wrapper{
+	padding: 30px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+}
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+.menu_block{
+	display: flex;
+	align-items: center;
+}
+.menu_block li{
+	margin-left: 40px;
+}
+.menu_block li a{
+	display: inline-block;
+	color: #3A3A3A;
+	font-weight: 300;
+    font-size: 18px;
+	transition: all 0.4s ease;
+}
+.menu_block li a:hover{
+    transform: translatey(-5px);
+}
+.menu_toggle_btn{
+	display: none;
+}
+/*============== Header Css End ===============*/
+
+/*==============  Banner Css Start ===============*/
+.banner_wrapper{
+	position: relative;
+	height: 900px;
+	background: #fff;
+	text-align: center;
+}
+.banner_wrap{
+	background: #F4F7FF;
+	min-height: 700px;
+	padding-top: 251px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+.banner_wrap::after{
+	content: '';
+	background-image: url(../images/hero-bg-left.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 645px;
+	height: 700px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	pointer-events: none;
+}
+.banner_wrap::before{
+	content: '';
+	background-image: url(../images/hero-bg-right.png);
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 645px;
+	height: 700px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	pointer-events: none;
+}
+.banner_sec h2{ 
+    font-weight: 600;
+	font-size: 60px;
+	color: #4285F4;
+	line-height: 1;
+	position: relative;
+	font-family: Kanit-SemiBold;
+}
+.banner_sec h2::after{
+	content: '';
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100px;
+	height: 1px;
+	background: #000;
+    border-radius: 2px;
+}
+.banner_btn a{
+	display: inline-block;
+	margin-top: 40px;
+	font-weight: 400;
+	font-size: 20px;
+	color: #14223F;
+	padding: 10px 60px;
+	border-radius: 25px;
+	text-transform: capitalize;
+	background: rgba(66, 133, 244, .2);
+	transition: all .3s ease;
+}
+.banner_btn a:hover{
+	background: rgba(66, 133, 244, 1);
+	color: #fff;
+}
+.banner_profile{
+	position: absolute;
+	z-index: 5;
+	top: 78%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* @keyframes profile_bg {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+  } */
+.profile_section img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+/*============== Banner Css Close ===============*/
+
+/*============== About Me Css Start ===============*/
+.about_wrapper{
+	padding: 122px 0 150px 0;
+	position: relative;
+	margin-bottom: 160px;
+}
+.about_wrapper::after{
+    content: '';
+	position: absolute;
+	top: -70px;
+	right: 0;
+	background-image: url(../images/right-hand.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 545px;
+	height: 277px;
+}
+.about_wrapper::before{
+    content: '';
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	background-image: url(../images/left-hand.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 545px;
+	height: 277px;
+}
+.about_wrap{
+	font-family: Kanit-SemiBold;
+	text-align: center;
+	color: #4285F4;
+	font-weight: 500;
+    font-size: 44px;
+}
+.about_menu_block{
+	max-width: 970px;
+	margin: 50px auto 0;
+	background: #F8F8F8;
+	border: 1px solid #DDDDDD;
+	border-radius: 20px;
+	padding: 30px 64px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.about_menu_block li{
+	position: relative;
+}
+.about_menu_block li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -22px;
+    height: 16px;
+    width: 2px;
+    background-color: #000;
+}
+.about_menu_block li:last-child::after{
+	display: none;
+}
+.about_menu_block li a{
+	display: inline-block;
+	color: #000000;
+	font-weight: 300;
+    font-size: 20px;
+}
+.about_menu_block li a:hover{
+	transform: translateY(-5px);
+}
+.about_scoail{
+	text-align: center;
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.about_scoail li{
+	margin-left: 20px;
+	transition: all .4s ease;
+}
+.about_scoail li:hover{
+	transform: translateY(-5px);
+}
+/*============== About Me Css Close ===============*/
+
+/*============== Skillset  Css STart ===============*/
+.skillset_wrapper{
+	background: #010E28;
+}
+.skillset_wrap{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.skillset_title{
+	font-family: Kanit-SemiBold;
+	color: #4285F4;
+	font-weight: 500;
+    font-size: 44px;
+	margin-bottom: 40px;
+}
+.skillset_aline{
+	text-align: right;
+}
+.skillset_item li{
+	color: #FFFFFF;
+	font-weight: 300;
+	font-size: 18px;
+	margin-bottom: 28px;
+}
+.skillset_item li:last-child{
+	margin-bottom: 0;
+} 
+.skillset_sec p{
+	color: #FFFFFF;
+	font-weight: 300;
+	font-size: 18px;
+	text-align: right;
+}
+.undergraduate{
+	margin-top: 20px;
+}
+/*============== Skillset  Css Close ===============*/
+
+/*============== Projects  Css Start ===============*/
+.projects_wrapper{
+	padding: 120px 0 170px 0;
+	position: relative;
+}
+.projects_title h2{
+	color: #4285F4;
+	font-weight: 500;
+    font-size: 44px;
+	text-align: center;
+	font-family: Kanit-SemiBold;
+}
+.projects_wrapper::after{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-image: url(../images/project-bg-left.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 375px;
+   height: 700px;
+   z-index: -1;
+}
+.projects_wrapper::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-image: url(../images/project-bg-right.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 375px;
+	height: 700px;
+	z-index: -1;
+ }
+ .projects_wrap{
+	max-width: 1047px;
+	margin: 45px auto 0;
+	position: relative;
+ }
+ .projects_wrap::after{
+    content: '';
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-image: url(../images/project-img.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 445px;
+	height: 380px;
+	z-index: -1;
+ }
+ .projects_block1 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 45px;
+ }
+ .projects_block1 li{
+	background: #FFFFFF;
+	box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.08);
+	border-radius: 10px;
+	width: 210px;
+	height: 199px;
+	text-align: center;
+	padding: 30px 15px;
+ }
+ .projects_link a{
+	display: inline-block;
+	color: #4285F4;
+	font-weight: 400;
+	font-size: 20px;
+	text-decoration-line: underline;
+	transition: all 0.4s ease;
+ }
+ .projects_link a:hover{
+	text-decoration-line: underline;
+	color: #000;
+ }
+ .projects_sec{
+	color: #7A7C80;
+	font-weight: 300;
+    font-size: 18px;
+	margin-top: 15px;
+ }
+ .projects_block2{
+	max-width: 909px;
+	margin: 70px auto 0;
+ }
+ .projects_block3{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+ }
+ .projects_bg{
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+ }
+/*============== Projects  Css Close ===============*/
